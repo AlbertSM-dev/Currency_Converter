@@ -31,7 +31,7 @@ namespace Currency_Converter_Web.Controllers
             else if (currencySelected == "AUD") { currencyChange = objJson.rates.AUD; }*/
             //Return total and selected
             ViewBag.Selected = currencySelected;
-            ViewBag.Total = Math.Round(Number * Convert.ToDouble(x.To), 4);
+            ViewBag.Total = Math.Round(x.Quantity * Convert.ToDouble(x.To), 4);
             //ViewBag.Total = Math.Round(Number * x.CurrrencySelectedTotal(currencySelected), objJson.rates);
             return View(objJson);
         }

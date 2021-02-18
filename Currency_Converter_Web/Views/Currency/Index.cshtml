@@ -61,14 +61,14 @@
                                 <select name="To" class="form-control form-control-lg selectpicker">
                                     <option value="@Model.rates.USD" data-content="<img src='img/united-states.png' /> USD" @if (ViewBag.Selected == "USD") { <text> selected="selected" </text> }></option>
                                     <option value="objJson.rates.GBP" data-content="<img src='img/united-kingdom.png' /> GBP" @if (ViewBag.Selected == "GBP") { <text> selected="selected" </text> }></option>
-                                    <option value="CAD" data-content="<img src='img/canada.png' /> CAD" @if (ViewBag.Selected == "CAD") { <text> selected="selected" </text> }></option>
-                                    <option value="AUD" data-content="<img src='img/australia.png' /> AUD" @if (ViewBag.Selected == "AUD") { <text> selected="selected" </text> }></option>
+                                    <option value="objJson.rates.CAD" data-content="<img src='img/canada.png' /> CAD" @if (ViewBag.Selected == "CAD") { <text> selected="selected" </text> }></option>
+                                    <option value="objJson.rates.AUD" data-content="<img src='img/australia.png' /> AUD" @if (ViewBag.Selected == "AUD") { <text> selected="selected" </text> }></option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-12 col-md-12">
-                                <span class="form-control form-control-lg bg-dark" style="color:white;background-color:darkblue;padding:1%;margin-top:1%;margin-bottom:1%;">@Model.Quantity : @ViewBag.Total </span>
+                                <span class="form-control form-control-lg bg-dark" style="color:white;background-color:darkblue;padding:1%;margin-top:1%;margin-bottom:1%;">@Model.Quantity : @ViewBag.Total @ViewBag.Selected </span>
                                 <!--<div class="form-group">
                                     @Html.LabelFor(model => model.rates.CAD)
                                     <div class="col-md-10">
