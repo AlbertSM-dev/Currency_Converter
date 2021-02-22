@@ -16,9 +16,9 @@ namespace Currency_Converter_Web.Controllers
         public IActionResult Index(Models.RootObject x)
         {
             //POST
-            int Number = x.Quantity;
-            string currencySelected = x.To;
-            double currencyChange = 0;
+            //int Number = x.Quantity;
+            //string currencySelected = x.To;
+            //double currencyChange = 0;
             //URL json
             var webClient = new WebClient();
             webClient.Headers.Add(HttpRequestHeader.Cookie, "cookievalue");
@@ -30,7 +30,7 @@ namespace Currency_Converter_Web.Controllers
             else if (currencySelected == "CAD") { currencyChange = objJson.rates.CAD; }
             else if (currencySelected == "AUD") { currencyChange = objJson.rates.AUD; }*/
             //Return total and selected
-            ViewBag.Selected = currencySelected;
+            ViewBag.Selected = x.To;
             ViewBag.Total = Math.Round(x.Quantity * Convert.ToDouble(x.To), 4);
             //ViewBag.Total = Math.Round(Number * x.CurrrencySelectedTotal(currencySelected), objJson.rates);
             return View(objJson);
