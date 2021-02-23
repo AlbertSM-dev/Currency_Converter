@@ -36,15 +36,6 @@ namespace Currency_Converter_Web.Controllers
             return View(objJson);
         }
 
-        /*[HttpPost]
-        public ActionResult Edit(Models.RootObject x)
-        {
-            // update student to the database
-            int Number = x.Quantity;
-            string currencySelected = x.To;
-            double currencyChange = 0;
-            return RedirectToAction("Index");
-        }*/
     }
     public class CurrencySelected
     {
