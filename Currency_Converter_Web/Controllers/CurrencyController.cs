@@ -38,6 +38,7 @@ namespace Currency_Converter_Web.Controllers
         }
 
     }
+
     public class CurrencySelected
     {
         public double CurrrencySelectedTotal(double quantity, double to)
