@@ -42,8 +42,6 @@ namespace Currency_Converter_Web.Controllers
     {
         public double CurrrencySelectedTotal(double quantity, double to)
         {
-           
-
             return Math.Round(quantity * to, 4);
         }
     }
