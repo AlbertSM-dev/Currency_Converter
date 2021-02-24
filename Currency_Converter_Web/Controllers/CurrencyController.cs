@@ -19,6 +19,7 @@ namespace Currency_Converter_Web.Controllers
             //int Number = x.Quantity;
             //string currencySelected = x.To;
             //double currencyChange = 0;
+            CurrencySelected currencyST = new CurrencySelected();
             //URL json
             var webClient = new WebClient();
             webClient.Headers.Add(HttpRequestHeader.Cookie, "cookievalue");
@@ -31,7 +32,7 @@ namespace Currency_Converter_Web.Controllers
             else if (currencySelected == "AUD") { currencyChange = objJson.rates.AUD; }*/
             //Return total and selected
             ViewBag.Selected = x.To;
-            ViewBag.Total = Math.Round(x.Quantity * Convert.ToDouble(x.To), 4);
+            ViewBag.Total = currencyST.CurrrencySelectedTotal(x.Quantity, Convert.ToDouble(x.To));
             //ViewBag.Total = Math.Round(Number * x.CurrrencySelectedTotal(currencySelected), objJson.rates);
             return View(objJson);
         }
@@ -39,17 +40,11 @@ namespace Currency_Converter_Web.Controllers
     }
     public class CurrencySelected
     {
-        /*
-        public double CurrrencySelectedTotal(string currencySelected, object s)
+        public double CurrrencySelectedTotal(double quantity, double to)
         {
-            double currencyChange = 0;
+           
 
-            if (currencySelected == "USD") { currencyChange = s.rates.USD; ; }
-            else if (currencySelected == "GBP") { currencyChange = rates.GBP; }
-            else if (currencySelected == "CAD") { currencyChange = rates.CAD; }
-            else if (currencySelected == "AUD") { currencyChange = rates.AUD; }
-
-            return currencyChange;
-        }*/
+            return Math.Round(quantity * to, 4);
+        }
     }
 }
