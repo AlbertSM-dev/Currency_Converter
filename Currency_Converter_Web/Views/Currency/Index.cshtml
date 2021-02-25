@@ -60,9 +60,9 @@
                             <div class="col-12 col-md-4 mb-2 mb-md-0">
                                 <select name="To" class="form-control form-control-lg selectpicker">
                                     <option value="@Model.rates.USD" data-content="<img src='img/united-states.png' /> USD" @if (ViewBag.Selected == "USD") { <text> selected="selected" </text> }></option>
-                                    <option value="objJson.rates.GBP" data-content="<img src='img/united-kingdom.png' /> GBP" @if (ViewBag.Selected == "GBP") { <text> selected="selected" </text> }></option>
-                                    <option value="objJson.rates.CAD" data-content="<img src='img/canada.png' /> CAD" @if (ViewBag.Selected == "CAD") { <text> selected="selected" </text> }></option>
-                                    <option value="objJson.rates.AUD" data-content="<img src='img/australia.png' /> AUD" @if (ViewBag.Selected == "AUD") { <text> selected="selected" </text> }></option>
+                                    <option value="@Model.rates.GBP" data-content="<img src='img/united-kingdom.png' /> GBP" @if (ViewBag.Selected == "GBP") { <text> selected="selected" </text> }></option>
+                                    <option value="@Model.rates.CAD" data-content="<img src='img/canada.png' /> CAD" @if (ViewBag.Selected == "CAD") { <text> selected="selected" </text> }></option>
+                                    <option value="@Model.rates.AUD" data-content="<img src='img/australia.png' /> AUD" @if (ViewBag.Selected == "AUD") { <text> selected="selected" </text> }></option>
                                 </select>
                             </div>
                         </div>
