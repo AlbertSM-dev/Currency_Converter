@@ -18,9 +18,9 @@ namespace Currency_Converter_Web.Controllers.Tests
             double total2 = currencySelected.CurrencySelectedTotal(2, 1.5);
 
             Assert.IsNotNull(total);
+            Assert.IsNotNull(total2);
             Assert.AreEqual(1.5, total);
             Assert.AreEqual(3, total2);
-            Assert.IsNotNull(total2);
             
         }
     }
