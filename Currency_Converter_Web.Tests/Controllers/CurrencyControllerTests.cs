@@ -21,7 +21,7 @@ namespace Currency_Converter_Web.Controllers.Tests
             Assert.IsNotNull(total2);
             Assert.AreEqual(1.5, total);
             Assert.AreEqual(6, total2);
-            
+             
         }
     }
 }
