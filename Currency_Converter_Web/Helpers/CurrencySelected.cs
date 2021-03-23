@@ -13,7 +13,7 @@ namespace Currency_Converter_Web.Helpers
     {
         public double CurrrencySelectedTotal(int quantity, double currency)
         {
-            return quantity * currency;
+            return Math.Round(quantity * currency, 4);
         }
     }
 }
