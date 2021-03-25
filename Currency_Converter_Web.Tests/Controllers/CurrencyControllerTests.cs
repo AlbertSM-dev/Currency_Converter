@@ -16,7 +16,7 @@ namespace Currency_Converter_Web.Controllers.Tests
             var currencySelected = new CurrencySelected();
             double total = currencySelected.CurrencySelectedTotal(1, 1.5);
             double total2 = currencySelected.CurrencySelectedTotal(4, 1.5);
-            double total3 = currencySelected.CurrencySelectedTotal(4.5, 1000000);
+            double total3 = currencySelected.CurrencySelectedTotal(4.5, 100000);
 
             Assert.IsNotNull(total);
             Assert.IsNotNull(total2);
@@ -24,7 +24,7 @@ namespace Currency_Converter_Web.Controllers.Tests
 
             Assert.AreEqual(1.5, total);
             Assert.AreEqual(6, total2);
-            Assert.AreEqual(4500000, total3);
+            Assert.AreEqual(450000, total3);
         }
     }
 }
