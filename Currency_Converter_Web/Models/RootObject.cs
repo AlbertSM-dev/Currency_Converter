@@ -45,20 +45,19 @@ namespace Currency_Converter_Web.Models
     public class RootObject
     {
         private int quantity;
-        /*public int Quantity
+        public int Quantity
         {
             get 
             {
                 if (quantity == 0) { return 1; }
                 else { return quantity; }
-                return quantity;
             }
             set
             {
                 quantity = value;
             }
-        }*/
-        public int Quantity { get; set; }
+        }
+        //public int Quantity { get; set; }
         public string To { get; set; }
         public Rates rates { get; set; }
         public string Base { get; set; }
