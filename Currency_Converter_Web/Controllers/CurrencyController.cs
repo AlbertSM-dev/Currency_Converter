@@ -19,7 +19,7 @@ namespace Currency_Converter_Web.Controllers
 
             var webClient = new WebClient();
             webClient.Headers.Add(HttpRequestHeader.Cookie, "cookievalue");
-            var json = webClient.DownloadString(@"https://api.exchangeratesapi.io/latest");
+            var json = webClient.DownloadString(@"http://api.exchangeratesapi.io//v1/latest?access_key=a8047f7531cca2d853eef972c87d3c43");
             Models.RootObject objJson = JsonConvert.DeserializeObject<Models.RootObject>(json);
 
             ViewBag.Selected = x.To;
