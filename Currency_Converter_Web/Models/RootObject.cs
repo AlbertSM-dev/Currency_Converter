@@ -49,7 +49,7 @@ namespace Currency_Converter_Web.Models
         {
             get 
             {
-                if (quantity == 0) { return 1; }
+                if (quantity == 0) { return 0; }
                 else { return quantity; }
             }
             set
