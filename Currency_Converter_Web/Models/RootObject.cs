@@ -58,7 +58,21 @@ namespace Currency_Converter_Web.Models
             }
         }
         //public int Quantity { get; set; }
-        public string To { get; set; }
+        //public string To { get; set; }
+        private string to;
+        public string To 
+        {
+            get
+            {
+                if (to == "@Model.rates.USD") { return "USD"; }
+                else { return to; }
+            }
+
+            set
+            {
+                to = value;
+            }
+        }
         public Rates rates { get; set; }
         public string Base { get; set; }
         public string Date { get; set; }
