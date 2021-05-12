@@ -12,7 +12,7 @@ namespace Currency_Converter_Web.Controllers
 
     public class CurrencyController : Controller
     {
-        //[HttpPost]
+        
         public IActionResult Index(Models.RootObject x)
         {
             CurrencySelected currencySelect = new CurrencySelected();
