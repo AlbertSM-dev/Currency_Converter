@@ -18,16 +18,19 @@ namespace Currency_Converter_Web.Controllers.Tests
             double total2 = currencySelected.CurrencySelectedTotal(4, 1.5);
             double total3 = currencySelected.CurrencySelectedTotal(4.5, 100000);
             double total4 = currencySelected.CurrencySelectedTotal(0, 0);
+            double total5 = currencySelected.CurrencySelectedTotal(1, 1);
 
             Assert.IsNotNull(total);
             Assert.IsNotNull(total2);
             Assert.IsNotNull(total3);
             Assert.IsNotNull(total4);
+            Assert.IsNotNull(total5);
 
             Assert.AreEqual(1.5, total);
             Assert.AreEqual(6, total2);
             Assert.AreEqual(450000, total3);
             Assert.AreEqual(0, total4);
+            Assert.AreEqual(1, total5);
         }
     }
 }
