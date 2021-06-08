@@ -57,8 +57,7 @@ namespace Currency_Converter_Web.Models
                 quantity = value;
             }
         }
-        //public int Quantity { get; set; }
-        //public string To { get; set; }
+
         private string to;
         public string To 
         {
